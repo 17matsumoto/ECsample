@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ログイン</title>
+    <!-- <link rel="stylesheet" type="text/css" th:href="@{/css/wro.css}" href="../../static/css/wro.css"/> -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/loginForm.css}" href="../../static/css/loginForm.css"/>
+     <link rel="stylesheet" media="all" th:href="@{/webjars/bootstrap/4.0.0/bootstrap-4.0.0.jar}" />
+
+</head>
+<body>
+
+<!-- <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" th:href="@{/}"><span></span></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="btn btn-info" th:href="@{/}" href="../goods/showGoods.html">ホーム</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<br/>
+
+<!-- <div class="container">
+    <h2>ログインフォーム</h2>
+
+    <div th:if="${param.error}" class="alert alert-danger">
+        ユーザー名またはパスワードが正しくありません。
+    </div>
+    <form method="post" th:action="@{/login}" action="../goods/showGoods.html" class="form-inline">
+        <input type="text" name="username" class="form-control" placeholder="E-mail" required="required"
+               autofocus="autofocus"/>
+        <input type="password" name="password" class="form-control" placeholder="パスワード" required="required"/>
+        <button type="submit" class="btn btn-default">ログイン</button>
+    </form>
+    <p>
+        アカウントをお持ちでない場合は<a th:href="@{/account/create(form)}" href="../account/createForm.html">こちら</a>から作成してください。
+    </p>
+</div> -->
+<div class="form-wrapper">
+  <h1>LogIn</h1>
+  <div th:if="${param.error}" class="alert alert-danger">
+        ユーザー名またはパスワードが正しくありません。
+    </div>
+  <form method="post" th:action="@{/login}" action="../goods/showGoods.html" class="form-inline">
+    <div class="form-item">
+      <label for="email"></label>
+      <input type="text" name="username" class="form-control" placeholder="E-mail" required="required"
+               autofocus="autofocus"/>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <input type="password" name="password" class="form-control" placeholder="Password" required="required"/>
+    </div>
+    <div class="button-panel">
+      <input type="submit" class="button" title="LigIn" value="LigIn"></input>
+    </div>
+  </form>
+  <div class="form-footer">
+  
+    <p><a th:href="@{/account/create(form)}" href="../account/createForm.html">Create an account</a></p>
+    <p><a href="#">Forgot password?</a></p>
+  </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>
