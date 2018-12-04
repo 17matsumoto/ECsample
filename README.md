@@ -10,11 +10,11 @@
 【1.はじめに】  
  このアプリケーションはSpring bootで作成したECサイト風Webアプリケーションです。
  基本的な商品購入までのフローにおける機能を実装しています。
-■技術情報
-・JDK version:jdk1.8.0_172
-・FrameWork：Spring boot 1.3.3.RELEASE
-・DB：H2database
-・build：Maven
+■技術情報  
+・JDK version:jdk1.8.0_172  
+・FrameWork：Spring boot 1.3.3.RELEASE  
+・DB：H2database  
+・build：Maven  
 
 【2.基本機能】  
 ・ アカウント登録  
